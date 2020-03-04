@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument('--data', dest='data_dir', default='data')
     parser.add_argument('--list', dest='list_dir', default='list')
     parser.add_argument('--model_name', dest='model_name', default = date_str)
-    parser.add_argument('--epoch', dest='epoch', default = 20)
+    parser.add_argument('--epoch', dest='epoch', default = EPOCH)
     args = parser.parse_args()
     return args
 
