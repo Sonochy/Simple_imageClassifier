@@ -46,7 +46,7 @@ def parse_args():
 
 # args = parse_args()
 # class.lst, train.lst and test.lst existが存在するかチェック
-EPOCH = args.epoch
+# EPOCH = args.epoch
 
 if utils.exist_list(args.list_dir):
     # format():変数の文字列への埋め込み, e.g.:''...{0}..'.format()
