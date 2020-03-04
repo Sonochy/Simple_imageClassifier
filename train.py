@@ -19,7 +19,7 @@ SLASH = 0.2 # percentage of test(validation) data
 # BATCH:勾配更新毎のサンプル数を示す
 BATCH_SIZE = 20
 # EPOCH:訓練データ配列の反復回数,一度に処理する学習回数
-EPOCH = 20
+# EPOCH = 20
 # Patiemce:EarlyStopping参照
 PATIENCE = 100
 MONITOR = 'val_acc'
@@ -40,13 +40,13 @@ def parse_args():
     parser.add_argument('--data', dest='data_dir', default='data')
     parser.add_argument('--list', dest='list_dir', default='list')
     parser.add_argument('--model_name', dest='model_name', default = date_str)
-    # parser.add_argument('--epoch', dest='epoch', default = 20)
+    parser.add_argument('--epoch', dest='epoch', default = 20)
     args = parser.parse_args()
     return args
 
 args = parse_args()
 # class.lst, train.lst and test.lst existが存在するかチェック
-# EPOCH = args.epoch
+EPOCH = int(args.epoch)
 
 if utils.exist_list(args.list_dir):
     # format():変数の文字列への埋め込み, e.g.:''...{0}..'.format()
