@@ -44,7 +44,7 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-# args = parse_args()
+args = parse_args()
 # class.lst, train.lst and test.lst existが存在するかチェック
 # EPOCH = args.epoch
 
