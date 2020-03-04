@@ -132,7 +132,7 @@ plot_model(model, to_file='model.png')
 es_cb = EarlyStopping(monitor=MONITOR, patience=PATIENCE, verbose=1, mode='auto')
 
 # ModelCheckpoint:Callback for save best model
-os.mkdir(date_str)
+os.mkdir(args.model_name)
 mc_cb = ModelCheckpoint(os.path.join('.',date_str,'acc_best_' + args.model_name + '.model'),
                                         monitor='val_acc',
                                         verbose = 1,
@@ -155,7 +155,7 @@ hist = model.fit(x_train, y_train,
 
 
 # save model
-model.save(os.path.join('.', date_str, 'IJS_' + args.model_name + '.model'))
+model.save(os.path.join('.', date_str, 'last_' + args.model_name + '.model'))
 
 # plot learning cuarv
 print(hist.history.keys())
