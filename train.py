@@ -40,11 +40,14 @@ def parse_args():
     parser.add_argument('--data', dest='data_dir', default='data')
     parser.add_argument('--list', dest='list_dir', default='list')
     parser.add_argument('--model_name', dest='model_name', default = date_str)
+    parser.add_argument('--epoch', dest='epoch', default = 20)
     args = parser.parse_args()
     return args
 
 args = parse_args()
 # class.lst, train.lst and test.lst existが存在するかチェック
+EPOCH = args.epoch
+
 if utils.exist_list(args.list_dir):
     # format():変数の文字列への埋め込み, e.g.:''...{0}..'.format()
     # {0}は変数0番目の意味
