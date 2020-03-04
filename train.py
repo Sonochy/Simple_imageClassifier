@@ -19,9 +19,9 @@ SLASH = 0.2 # percentage of test(validation) data
 # BATCH:勾配更新毎のサンプル数を示す
 BATCH_SIZE = 20
 # EPOCH:訓練データ配列の反復回数,一度に処理する学習回数
-EPOCH = 2
+EPOCH = 20
 # Patiemce:EarlyStopping参照
-PATIENCE = 10
+PATIENCE = 100
 MONITOR = 'val_acc'
 # model.compileの最適化アルゴリズム指定
 OPTIMIZER = 'rmsprop'
